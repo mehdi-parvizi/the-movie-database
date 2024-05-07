@@ -7,6 +7,7 @@ const theme = extendTheme({
         bgGradient: "linear(to left, #494949, #181818)",
         minHeight: "100vh",
         margin: 0,
+        color: "white",
       },
     },
   },

@@ -28,6 +28,8 @@ const MediaGrid = () => {
             setSelectedType("movie");
             setSelectedGenre(null);
           }}
+          bg={"gray.900"}
+          color={"white"}
           w={"49%"}
         >
           Movies
@@ -37,7 +39,9 @@ const MediaGrid = () => {
             setSelectedType("tv");
             setSelectedGenre(null);
           }}
+          bg={"gray.900"}
           w={"49%"}
+          color={"white"}
         >
           Series
         </Button>

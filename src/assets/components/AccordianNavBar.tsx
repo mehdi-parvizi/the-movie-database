@@ -64,6 +64,7 @@ const AccordianNavBar = () => {
                   setSelectedGenre(null);
                   setSelectedType("movie");
                 }}
+                color={"white"}
                 variant="ghost"
                 width="100%"
               >
@@ -77,6 +78,7 @@ const AccordianNavBar = () => {
                       setSelectedType("movie");
                     }
                   }}
+                  color={"white"}
                   key={genre.id}
                   variant="ghost"
                   width="100%"
@@ -101,6 +103,7 @@ const AccordianNavBar = () => {
                   setSelectedGenre(null);
                   setSelectedType("tv");
                 }}
+                color={"white"}
                 variant="ghost"
                 width="100%"
               >
@@ -114,6 +117,7 @@ const AccordianNavBar = () => {
                       setSelectedType("tv");
                     }
                   }}
+                  color={"white"}
                   key={genre.id}
                   variant="ghost"
                   width="100%"

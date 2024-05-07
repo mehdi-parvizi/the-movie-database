@@ -25,7 +25,7 @@ const SearchButton = ({ onClick, isClose }: Props) => {
       {isLoading && searchedText.length > 2 ? (
         <Spinner size={"sm"} />
       ) : (
-        <IoIosSearch />
+        <IoIosSearch color="white" />
       )}
     </Button>
   );

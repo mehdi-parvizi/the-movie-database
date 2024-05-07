@@ -1,6 +1,7 @@
 import {
   Badge,
   Box,
+  Text,
   Card,
   CardBody,
   CardFooter,
@@ -54,7 +55,7 @@ const MovieCard = ({ media }: Props) => {
           fallbackSrc={placeHolder}
         />
 
-        <CardHeader paddingX={0}>
+        <CardHeader paddingX={0} color={"white"}>
           <Link
             onClick={() => {
               window.scroll(0, 0);
@@ -62,7 +63,7 @@ const MovieCard = ({ media }: Props) => {
             }}
             to={`/media/${media.id}`}
           >
-            <Box>
+            <Box color={"white"}>
               <h5>
                 {media.original_name || media.original_title}
                 <br />
@@ -93,17 +94,18 @@ const MovieCard = ({ media }: Props) => {
         </CardHeader>
         <CardBody padding={0}>
           <Collapse
+            color={"white"}
             startingHeight={70}
             in={isOpen}
             transition={{ exit: { delay: 0.1 }, enter: { duration: 0.5 } }}
             animateOpacity
           >
-            {media.overview}
+            <Text color={"white"}>{media.overview}</Text>
           </Collapse>
         </CardBody>
 
         <Center>
-          <CardFooter paddingTop={5} paddingBottom={0}>
+          <CardFooter paddingTop={5} paddingBottom={0} color={"white"}>
             <button
               className="btn btn-outline-light"
               onClick={() => {
