@@ -2,7 +2,7 @@ import Genre from "../entities/Genre";
 import APIClient from "../services/apiClient";
 import { useQuery, useQueryClient } from "@tanstack/react-query";
 
-interface Genres {
+export interface Genres {
   genres: Genre[];
 }
 

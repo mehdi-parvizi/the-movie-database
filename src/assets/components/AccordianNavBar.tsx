@@ -7,7 +7,7 @@ import {
   Box,
   Button,
 } from "@chakra-ui/react";
-import useGenres from "../hooks/useGenres";
+import useGenres, { Genres } from "../hooks/useGenres";
 import useMovieStore from "../services/MovieStore";
 import { useState, useEffect } from "react";
 
@@ -28,8 +28,14 @@ const AccordianNavBar = () => {
   const setSelectedGenre = useMovieStore((s) => s.setSelectedGenre);
   const setSelectedType = useMovieStore((s) => s.setSelectedType);
 
-  const { data: movieGenres, error } = useGenres("movie");
-  const { data: seriesGenres } = useGenres("tv");
+  const { data: movieGenres, error } = useGenres("movie") as {
+    data: Genres;
+    error?: any;
+  };
+  const { data: seriesGenres } = useGenres("tv") as {
+    data: Genres;
+    error?: any;
+  };
 
   return (
     <>
