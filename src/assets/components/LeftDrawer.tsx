@@ -1,9 +1,12 @@
 import { Box, Button } from "@chakra-ui/react";
-import useGenres from "../hooks/useGenres";
+import useGenres, { Genres } from "../hooks/useGenres";
 import useMovieStore from "../services/MovieStore";
 
 const LeftDrawer = () => {
-  const { data: movieGenres } = useGenres("movie");
+  const { data: movieGenres } = useGenres("movie") as {
+    data: Genres;
+    error?: any;
+  };
   const isDrawerOpen = useMovieStore((s) => s.isDrawerOpen);
   const setIsDrawerOpen = useMovieStore((s) => s.setIsDrawerOpen);
   const setSelectedGenre = useMovieStore((s) => s.setSelectedGenre);
