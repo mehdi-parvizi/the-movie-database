@@ -2,8 +2,12 @@
 
 this project features a responsive movie info website using www.tmdb.org api to show movies or series, can be categorized based on genre
 
+**
 you have to provide your own API key to be able to use this code
+**
 you can find the components in this directory: src\assets\components
+\_\_
+
 services can be found at this address: src\assets\services
 
 the search functionality is implemented to search for series, movies and people
