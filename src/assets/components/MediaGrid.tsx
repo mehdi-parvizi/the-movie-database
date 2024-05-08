@@ -1,11 +1,10 @@
 import useMedia from "../hooks/useMedia";
-import { Box, Button, Flex, Hide, SimpleGrid, Spinner } from "@chakra-ui/react";
+import { Box, Button, Flex, SimpleGrid, Spinner } from "@chakra-ui/react";
 import MovieCard from "./MovieCard";
 import React from "react";
 import InfiniteScroll from "react-infinite-scroll-component";
 import Skeletons from "./Skeletons";
 import useMovieStore from "../services/MovieStore";
-import LeftDrawer from "./LeftDrawer";
 const MediaGrid = () => {
   const { data, fetchNextPage, hasNextPage } = useMedia();
   const setSelectedType = useMovieStore((s) => s.setSelectedType);
