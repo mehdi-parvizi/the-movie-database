@@ -1,4 +1,11 @@
-import { Box, Button, Center, Hide, SimpleGrid } from "@chakra-ui/react";
+import {
+  Box,
+  Button,
+  Center,
+  GridItem,
+  Hide,
+  SimpleGrid,
+} from "@chakra-ui/react";
 import { Link, useParams } from "react-router-dom";
 import useMovieDetails from "../hooks/useMovieDetails";
 import getImageLink from "../services/getImageLink";
@@ -59,16 +66,16 @@ const MediaPage = () => {
           p={{ base: 1, sm: 2, md: 10, lg: 20 }}
           boxShadow={"dark-lg"}
         >
-          <Box mt={{ base: "55px" }}>
+          <GridItem mt={{ base: "55px" }}>
             <Trailer id={id!} />
-          </Box>
-          <Box
+          </GridItem>
+          <GridItem
             display={"flex"}
             justifyContent={"space-evenly"}
             alignItems={"center"}
           >
             <Details details={details} />
-          </Box>
+          </GridItem>
         </SimpleGrid>
       </Center>
       <Center>
