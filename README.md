@@ -1,30 +1,10 @@
-# React + TypeScript + Vite
+# The movie database
+this project features a responsive movie info database using www.tmdb.org api to show movies or series, can be categorized based on genre
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+you have to provide your own API key to be able to use this code
 
-Currently, two official plugins are available:
+the search functionality is implemented to search for series, movies and people
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+uppon clicking on a media title(series or movies) you're routed to that media page showing the full overview, recommendations, and a youtube video related to that media
+when clicking on a person name you can see what series or movies they played or directed and their release dates (people are only accessible if you search for them)
 
-## Expanding the ESLint configuration
-
-If you are developing a production application, we recommend updating the configuration to enable type aware lint rules:
-
-- Configure the top-level `parserOptions` property like this:
-
-```js
-export default {
-  // other rules...
-  parserOptions: {
-    ecmaVersion: 'latest',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
-    tsconfigRootDir: __dirname,
-  },
-}
-```
-
-- Replace `plugin:@typescript-eslint/recommended` to `plugin:@typescript-eslint/recommended-type-checked` or `plugin:@typescript-eslint/strict-type-checked`
-- Optionally add `plugin:@typescript-eslint/stylistic-type-checked`
-- Install [eslint-plugin-react](https://github.com/jsx-eslint/eslint-plugin-react) and add `plugin:react/recommended` & `plugin:react/jsx-runtime` to the `extends` list
