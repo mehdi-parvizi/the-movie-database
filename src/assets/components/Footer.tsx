@@ -24,6 +24,7 @@ const Footer = () => {
         rounded={0}
         flex={1}
         height={20}
+        color={"white"}
         onClick={() => setIsDrawerOpen(true)}
       >
         Genre
@@ -35,6 +36,7 @@ const Footer = () => {
         rounded={0}
         flex={1}
         height={20}
+        color={"white"}
         onClick={() => {
           setShowSearchbar(!showSearchBar);
           setSearchText("");

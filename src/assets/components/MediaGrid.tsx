@@ -28,7 +28,7 @@ const MediaGrid = () => {
             setSelectedType("movie");
             setSelectedGenre(null);
           }}
-          bg={"gray.900"}
+          bg={"gray.800"}
           color={"white"}
           w={"49%"}
         >
@@ -39,7 +39,7 @@ const MediaGrid = () => {
             setSelectedType("tv");
             setSelectedGenre(null);
           }}
-          bg={"gray.900"}
+          bg={"gray.800"}
           w={"49%"}
           color={"white"}
         >
@@ -52,9 +52,6 @@ const MediaGrid = () => {
         next={() => fetchNextPage()}
         loader={<Spinner size={"sm"} />}
       >
-        <Hide above="md">
-          <LeftDrawer />
-        </Hide>
         <Box alignContent={"start"} margin={10}>
           {selectedType === "movie" && (
             <h4>{selectedGenre?.name || "Top Movies"}</h4>

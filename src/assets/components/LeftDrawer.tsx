@@ -1,6 +1,7 @@
 import { Box, Button } from "@chakra-ui/react";
 import useGenres, { Genres } from "../hooks/useGenres";
 import useMovieStore from "../services/MovieStore";
+import { useNavigate } from "react-router";
 
 const LeftDrawer = () => {
   const { data: movieGenres } = useGenres("movie") as {
@@ -10,6 +11,9 @@ const LeftDrawer = () => {
   const isDrawerOpen = useMovieStore((s) => s.isDrawerOpen);
   const setIsDrawerOpen = useMovieStore((s) => s.setIsDrawerOpen);
   const setSelectedGenre = useMovieStore((s) => s.setSelectedGenre);
+
+  const navigate = useNavigate();
+
   return (
     <Box
       transition={"left 0.15s ease-in-out"}
@@ -26,7 +30,9 @@ const LeftDrawer = () => {
         mb={1}
         bg={"darkcyan"}
         w={"100%"}
-        onClick={() => setSelectedGenre(null)}
+        onClick={() => {
+          setSelectedGenre(null), navigate("/");
+        }}
       >
         Top Movies
       </Button>
@@ -37,7 +43,11 @@ const LeftDrawer = () => {
           height={"4vh"}
           value={"outline"}
           key={genre.id}
-          onClick={() => setSelectedGenre(genre)}
+          bg={"gray.800"}
+          color={"white"}
+          onClick={() => {
+            setSelectedGenre(genre), navigate("/");
+          }}
         >
           {genre.name}
         </Button>

@@ -8,12 +8,12 @@ interface Props {
 }
 
 const Trailer = ({ id }: Props) => {
-  const [width, setWidth] = useState("640");
-  const [height, setHeight] = useState("315");
+  const [width, setWidth] = useState(window.innerWidth < 640 ? "380" : "640");
+  const [height, setHeight] = useState(window.innerWidth < 640 ? "225" : "315");
   useEffect(() => {
     const handleResize = () => {
-      setWidth(window.innerWidth < 640 ? "240" : "640");
-      setHeight(window.innerWidth < 640 ? "165" : "315");
+      setWidth(window.innerWidth < 640 ? "380" : "640");
+      setHeight(window.innerWidth < 640 ? "225" : "315");
     };
     addEventListener("resize", handleResize);
     return () => {
