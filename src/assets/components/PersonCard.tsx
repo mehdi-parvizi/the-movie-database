@@ -35,6 +35,7 @@ const PersonCard = ({ person }: Props) => {
   return (
     <Box key={person.id} position="relative" mb={4}>
       <Card
+        color={"white"}
         boxShadow={"dark-lg"}
         backgroundColor={"transparent"}
         padding={6}
@@ -49,6 +50,7 @@ const PersonCard = ({ person }: Props) => {
         )}
         <CardHeader paddingX={0}>
           <Box
+            color={"white"}
             as="button"
             onClick={() => {
               setMediaId(person.id);
@@ -60,7 +62,7 @@ const PersonCard = ({ person }: Props) => {
           <br />
           {person.known_for_department}
         </CardHeader>
-        <CardBody padding={0}>
+        <CardBody color={"white"} padding={0}>
           <Collapse
             startingHeight={40}
             in={isOpen}
@@ -74,7 +76,7 @@ const PersonCard = ({ person }: Props) => {
         </CardBody>
 
         <Center>
-          <CardFooter paddingTop={5} paddingBottom={0}>
+          <CardFooter color={"white"} paddingTop={5} paddingBottom={0}>
             <button
               className="btn btn-outline-light"
               onClick={() => {

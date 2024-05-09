@@ -23,6 +23,7 @@ const PersonCreditsCard = () => {
   return (
     <>
       <Card
+        color={"white"}
         zIndex={1000}
         ml={{ base: "5vw", xl: "15vw" }}
         width={{ base: 300, sm: 600, md: 500, lg: 700 }}
@@ -32,9 +33,9 @@ const PersonCreditsCard = () => {
         backgroundColor="transparent"
       >
         <CardHeader>
-          <Box display="flex" justifyContent="flex-end">
-            <Button onClick={() => setPersonName(null)}>
-              <IoCloseOutline />
+          <Box color={"white"} display="flex" justifyContent="flex-end">
+            <Button bg={"gray"} onClick={() => setPersonName(null)}>
+              <IoCloseOutline color="white" />
             </Button>
           </Box>
         </CardHeader>
@@ -46,7 +47,7 @@ const PersonCreditsCard = () => {
             <Spinner />
           </Center>
         )}
-        <CardBody overflowY={"scroll"}>
+        <CardBody color={"white"} overflowY={"scroll"}>
           {personCredits?.cast.map((item: PersonCreditsType, index: number) => (
             <React.Fragment key={index}>
               <p>

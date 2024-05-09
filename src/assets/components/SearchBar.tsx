@@ -58,7 +58,7 @@ const SearchBar = () => {
                     setSearchText("");
                   }}
                 >
-                  <IoCloseOutline />
+                  <IoCloseOutline color="white" />
                 </Button>
               </HStack>
             </Center>
