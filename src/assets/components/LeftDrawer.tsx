@@ -13,7 +13,7 @@ const LeftDrawer = () => {
   const setSelectedGenre = useMovieStore((s) => s.setSelectedGenre);
 
   const navigate = useNavigate();
-
+  const setSelectedType = useMovieStore((s) => s.setSelectedType);
   return (
     <Box
       transition={"left 0.15s ease-in-out"}
@@ -31,7 +31,7 @@ const LeftDrawer = () => {
         bg={"darkcyan"}
         w={"100%"}
         onClick={() => {
-          setSelectedGenre(null), navigate("/");
+          setSelectedGenre(null), setSelectedType("movie"), navigate("/");
         }}
       >
         Top Movies
@@ -46,7 +46,7 @@ const LeftDrawer = () => {
           bg={"gray.800"}
           color={"white"}
           onClick={() => {
-            setSelectedGenre(genre), navigate("/");
+            setSelectedGenre(genre), setSelectedType("movie"), navigate("/");
           }}
         >
           {genre.name}
