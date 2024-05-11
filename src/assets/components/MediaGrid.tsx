@@ -27,7 +27,7 @@ const MediaGrid = () => {
             setSelectedType("movie");
             setSelectedGenre(null);
           }}
-          bg={"gray.800"}
+          bg={selectedType === "movie" ? "gray.700" : "gray.800"}
           color={"white"}
           w={"49%"}
           rounded={30}
@@ -36,11 +36,11 @@ const MediaGrid = () => {
         </Button>
         <Button
           rounded={30}
+          bg={selectedType === "tv" ? "gray.700" : "gray.800"}
           onClick={() => {
             setSelectedType("tv");
             setSelectedGenre(null);
           }}
-          bg={"gray.800"}
           w={"49%"}
           color={"white"}
         >
