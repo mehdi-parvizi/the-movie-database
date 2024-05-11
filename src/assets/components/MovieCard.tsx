@@ -48,7 +48,7 @@ const MovieCard = ({ media }: Props) => {
         padding={6}
         key={media.id}
         overflow={"visible"}
-        rounded={30}
+        rounded={10}
       >
         <Image
           src={getImageLink(media.poster_path)}

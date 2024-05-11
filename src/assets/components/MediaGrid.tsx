@@ -30,10 +30,12 @@ const MediaGrid = () => {
           bg={"gray.800"}
           color={"white"}
           w={"49%"}
+          rounded={30}
         >
           Movies
         </Button>
         <Button
+          rounded={30}
           onClick={() => {
             setSelectedType("tv");
             setSelectedGenre(null);
