@@ -4,7 +4,8 @@ import useMovieStore from "../services/MovieStore";
 import { useNavigate } from "react-router";
 
 const LeftDrawer = () => {
-  const { data: movieGenres } = useGenres("movie") as {
+  const selectedType = useMovieStore((s) => s.selectedType);
+  const { data: movieGenres } = useGenres(selectedType!) as {
     data: Genres;
     error?: any;
   };
@@ -13,7 +14,6 @@ const LeftDrawer = () => {
   const setSelectedGenre = useMovieStore((s) => s.setSelectedGenre);
 
   const navigate = useNavigate();
-  const setSelectedType = useMovieStore((s) => s.setSelectedType);
   return (
     <Box
       transition={"left 0.15s ease-in-out"}
@@ -31,10 +31,10 @@ const LeftDrawer = () => {
         bg={"darkcyan"}
         w={"100%"}
         onClick={() => {
-          setSelectedGenre(null), setSelectedType("movie"), navigate("/");
+          setSelectedGenre(null), navigate("/");
         }}
       >
-        Top Movies
+        {selectedType === "tv" ? "Top Series" : "Top Movies"}
       </Button>
       {movieGenres?.genres.map((genre) => (
         <Button
@@ -46,7 +46,7 @@ const LeftDrawer = () => {
           bg={"gray.800"}
           color={"white"}
           onClick={() => {
-            setSelectedGenre(genre), setSelectedType("movie"), navigate("/");
+            setSelectedGenre(genre), navigate("/");
           }}
         >
           {genre.name}

@@ -27,3 +27,5 @@ dist-ssr
 
 # ignore .env
 .env
+# Local Netlify folder
+.netlify
